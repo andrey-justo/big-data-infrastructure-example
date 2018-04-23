@@ -68,10 +68,6 @@ $ /usr/local/spark/sbin/start-history-server.sh
 If you'd like to learn more about working and optimizing Vagrant then
 take a look at [ADVANCED.md](ADVANCED.md).
 
-# For developers
-
-The file [DEVELOP.md](DEVELOP.md) contains some tips for developers.
-
 # Credits
 
 This project is based on the great work carried out at
