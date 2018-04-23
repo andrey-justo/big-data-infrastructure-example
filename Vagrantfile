@@ -29,7 +29,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         ranger.vm.network :private_network, ip: "10.211.55.102"
         ranger.vm.hostname = "10.211.55.102"
         ranger.vm.provider "virtualbox" do |v|
-          v.name = "master-worker"
+          v.name = "ranger"
           v.customize ["modifyvm", :id, "--memory", "2048"]
         end
 
