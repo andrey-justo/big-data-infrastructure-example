@@ -1,1 +1,0 @@
-# vagrant-big-data-infrastructure
