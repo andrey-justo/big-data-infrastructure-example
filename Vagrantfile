@@ -9,7 +9,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         node.vm.hostname = "10.211.55.101"
         node.vm.provider "virtualbox" do |v|
           v.name = "master-worker"
-          v.customize ["modifyvm", :id, "--memory", "2048"]
+          v.memory = 2048
+          v.cpus = 2
         end
 
         node.vm.provision "shell", path: "scripts/setup-centos.sh"
@@ -30,7 +31,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         ranger.vm.hostname = "10.211.55.102"
         ranger.vm.provider "virtualbox" do |v|
           v.name = "ranger"
-          v.customize ["modifyvm", :id, "--memory", "2048"]
+          v.memory = 2048
+          v.cpus = 2
         end
 
         ranger.vm.provision "shell", path: "scripts/setup-centos.sh"

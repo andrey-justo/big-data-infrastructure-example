@@ -47,6 +47,8 @@ function installHadoop {
 function formatHdfs {
     echo "formatting HDFS"
     hdfs namenode -format -force
+    # datanode doesn't have format - https://stackoverflow.com/questions/40438252/datanode-is-not-starting-incompatible-clusterid-hadoop
+    rm -rf /var/hadoop/hadoop-datanode/*
 }
 
 function startDaemons {

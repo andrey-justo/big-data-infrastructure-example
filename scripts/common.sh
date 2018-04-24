@@ -40,8 +40,9 @@ ZEPPELIN_CONF_DIR=${ZEPPELIN_HOME}/conf
 ZEPPELIN_NOTEBOOK_DIR=${ZEPPELIN_HOME}/notebook
 
 # jupyter
+export PYSPARK_PYTHON=python3.6
 export PYSPARK_DRIVER_PYTHON=jupyter
-export PYSPARK_DRIVER_PYTHON_OPTS='notebook'
+export PYSPARK_DRIVER_PYTHON_OPTS='notebook --ip=0.0.0.0 --config=/usr/local/jupyter/jupyter_notebook_config.py --no-browser --allow-root'
 export PYTHONPATH=$SPARK_HOME/python:$SPARK_HOME/python/lib/py4j-0.10.4-src.zip
 
 # apache ranger
@@ -55,6 +56,9 @@ SSH_RES_DIR=/vagrant/resources/ssh
 RES_SSH_COPYID_ORIGINAL=$SSH_RES_DIR/ssh-copy-id.original
 RES_SSH_COPYID_MODIFIED=$SSH_RES_DIR/ssh-copy-id.modified
 RES_SSH_CONFIG=$SSH_RES_DIR/config
+
+# java
+JAVA_HOME=/usr/local/java
 
 function resourceExists {
 	FILE=/vagrant/resources/$1

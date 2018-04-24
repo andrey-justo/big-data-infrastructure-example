@@ -46,6 +46,11 @@ Here are some useful links to navigate to various UI's:
 To test out the virtual machine setup, and for examples of how to run
 MapReduce, Hive and Spark, head on over to [VALIDATING.md](VALIDATING.md).
 
+# Apache Ranger
+
+Apache ranger is a tool to audit and give security centralization across Hadoop Platform
+```vagrant up ranger```
+
 # Starting services in the event of a system restart
 
 Currently if you restart your VM then the Hadoop/Spark/Hive services won't be
