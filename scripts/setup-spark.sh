@@ -27,6 +27,7 @@ function setupEnvVars {
 	echo "creating spark environment variables"
 	cp -f $SPARK_RES_DIR/spark.sh /etc/profile.d/spark.sh
 	source /etc/profile.d/spark.sh
+	cp -f $HIVE_CONF/hive-site.xml $SPARK_CONF_DIR
 }
 
 function setupHistoryServer {

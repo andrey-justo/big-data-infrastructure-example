@@ -51,6 +51,12 @@ RANGER_ARCHIVE=apache-ranger-$RANGER_VERSION.tar.gz
 RANGER_MIRROR_DOWNLOAD=http://archive.apache.org/dist/ranger/$RANGER_VERSION/$RANGER_ARCHIVE
 RANGER_RES_DIR=/vagrant/resources/ranger
 
+# livy
+LIVY_VERSION=0.5.0
+LIVY_ARCHIVE=livy-$LIVY_VERSION-incubating-bin
+LIVY_MIRROR_DOWNLOAD=http://apache.dattatec.com/incubator/livy/$LIVY_VERSION-incubating/livy-$LIVY_VERSION-incubating-bin.zip
+export LIVY_SERVER_JAVA_OPTS="-Dlivy.server.session.factory=yarn -Dlivy.spark.deployMode=client -Dlivy.spark.master=yarn -Dlivy.server.host=10.211.55.101"
+
 # ssh
 SSH_RES_DIR=/vagrant/resources/ssh
 RES_SSH_COPYID_ORIGINAL=$SSH_RES_DIR/ssh-copy-id.original

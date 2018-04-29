@@ -9,7 +9,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         node.vm.hostname = "10.211.55.101"
         node.vm.provider "virtualbox" do |v|
           v.name = "master-worker"
-          v.memory = 2048
+          v.memory = 4096
           v.cpus = 2
         end
 
@@ -21,6 +21,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         node.vm.provision "shell", path: "scripts/setup-hadoop.sh"
         node.vm.provision "shell", path: "scripts/setup-hive.sh"
         node.vm.provision "shell", path: "scripts/setup-spark.sh"
+        node.vm.provision "shell", path: "scripts/setup-livy.sh"
         node.vm.provision "shell", path: "scripts/setup-jupyter.sh"
         #node.vm.provision "shell", path: "scripts/setup-zeppelin.sh"
         node.vm.provision "shell", path: "scripts/finalize-centos.sh"

@@ -40,6 +40,7 @@ Here are some useful links to navigate to various UI's:
 * Spark context UI (if a Spark context is running): (http://10.211.55.101:4040)
 * Zeppelin UI: (http://10.211.55.101:8082) - (Default login: admin/admin) - If installed
 * Jupyter UI: (http://10.211.55.101:8888)
+* Livy: (http://10.211.55.101:8998)
 
 # Validating your virtual machine setup
 

@@ -7,6 +7,7 @@ function disableFirewall {
 	echo "disabling firewall"
 	systemctl stop firewalld
 	systemctl mask firewalld
+	systemctl disable firewalld
 	yum install -y iptables-services
 	systemctl enable iptables
 	service iptables save

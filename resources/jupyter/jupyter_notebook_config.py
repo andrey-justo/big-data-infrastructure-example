@@ -45,7 +45,7 @@ c.JupyterApp.answer_yes = False
 #  Use '*' to allow any origin to access your server.
 #  
 #  Takes precedence over allow_origin_pat.
-#c.NotebookApp.allow_origin = ''
+c.NotebookApp.allow_origin = '*'
 
 ## Use a regular expression for the Access-Control-Allow-Origin header
 #  
@@ -68,7 +68,7 @@ c.JupyterApp.answer_yes = False
 #c.NotebookApp.allow_password_change = True
 
 ## Whether to allow the user to run the notebook as root.
-#c.NotebookApp.allow_root = False
+c.NotebookApp.allow_root = True
 
 ## DEPRECATED use base_url
 #c.NotebookApp.base_project_url = '/'

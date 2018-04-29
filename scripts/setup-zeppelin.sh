@@ -33,7 +33,7 @@ function startingZeppelin {
 	bash /usr/local/zeppelin/bin/zeppelin-daemon.sh start
 }
 
-echo "Starting Zeppelin..."
+echo "Setting up Zeppelin..."
 
 installZeppelin
 installInterpreters
