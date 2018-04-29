@@ -17,7 +17,8 @@ The virtual machine will be running the following services:
 * Mysql for hive catalog
 * Spark history server
 * Zeppelin 0.7.3
-* Jupyter
+* Jupyter + Spark Magic
+* Livy
 
 # Getting Started
 
